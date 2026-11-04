@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #e9e9e2;
+    --black: #171916;
+    --orange: #ff5728;
+    --white: #f9f9f4;
+    --gray: #777b72;
+    --line: #c8cbc1;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    padding: 55px 25px;
+}
+
+/* MAIN LAYOUT */
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.card {
+    background: var(--white);
+    padding: 45px;
+    border: 1px solid var(--black);
+    box-shadow: 10px 10px 0 var(--black);
+}
+
+/* HEADER */
+
+.header {
+    text-align: left;
+    position: relative;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 25px;
+}
+
+.header::before {
+    content: "COFFEE / SYSTEM 001";
+    display: inline-block;
+    background: var(--orange);
+    color: var(--black);
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(32px, 6vw, 58px);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: var(--gray);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* DIVIDER */
+
+.divider {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 25px 0;
+}
+
+.info-tanggal {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 1px;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    background: var(--black);
+    color: var(--white);
+    padding: 16px 12px;
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 17px 12px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+tbody tr:hover td,
+tr:hover td {
+    background: #f0eee7;
+}
+
+/* TOTAL */
+
+.ringkasan {
+    max-width: 400px;
+    margin: 35px 0 0 auto;
+    padding-top: 10px;
+}
+
+.ringkasan .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 13px;
+    border-bottom: 1px solid var(--line);
+}
+
+.total {
+    background: var(--orange);
+    padding: 18px !important;
+    margin-top: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid var(--black);
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border: 2px solid var(--orange);
+    background: #fff;
+}
+
+input::placeholder {
+    color: #a3a59c;
+}
+
+button {
+    background: var(--orange);
+    color: var(--black);
+    border: 1px solid var(--black);
+    padding: 17px 25px;
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.error {
+    display: block;
+    color: #d52f20;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.success {
+    background: #dcebd5;
+    border-left: 5px solid #3d7b35;
+    padding: 16px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid var(--line);
+    margin-top: 35px;
+    padding-top: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    .card {
+        padding: 25px 16px;
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .header h1 {
+        letter-spacing: -2px;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    .card {
+        overflow-x: auto;
+    }
+
+    .ringkasan {
+        max-width: 100%;
+    }
+}
